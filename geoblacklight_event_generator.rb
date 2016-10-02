@@ -23,11 +23,6 @@ module GeoConcerns
         base_message(type, record).merge("exchange" => :geoblacklight,
                                          "doc" => generate_document(record))
       end
-
-      def delete_message(type, record)
-        base_message(type, record).merge("exchange" => :geoblacklight,
-                                         "id" => generate_document(record).to_hash[:layer_slug_s])
-      end
       
       ...
     end
