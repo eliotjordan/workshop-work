@@ -2,6 +2,7 @@ require 'bunny'
 
 module GeoConcerns
   class RabbitMessagingClient
+    
     def publish(message)
       exchange_type = JSON.parse(message)['exchange']
       send(exchange_type)
