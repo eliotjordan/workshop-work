@@ -1,5 +1,3 @@
-require 'bunny'
-
 module GeoConcerns
   class RabbitMessagingClient
     
