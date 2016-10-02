@@ -7,8 +7,6 @@ module GeoConcerns
       exchange_type = JSON.parse(message)['exchange']
       send(exchange_type)
       @exchange.publish(message, persistent: true)
-    rescue
-      Rails.logger.warn "Unable to publish message to #{amqp_url}"
     end
 
     def geoblacklight
